@@ -1,8 +1,7 @@
-import { LeitorComponent } from "../../components/Leitor/LeitorComponent";
-import { Leitor } from "../../model/Leitor";
+import { LeitorComponent } from "../components/Leitor/LeitorComponent"
+import { Leitor } from "../model/Leitor"
 
 export class LeitorController {
-
   private leitorComponent: LeitorComponent
 
   constructor() {

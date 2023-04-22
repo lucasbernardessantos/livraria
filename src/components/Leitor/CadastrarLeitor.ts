@@ -1,12 +1,12 @@
 export class CadastrarLeitor {
-
   static template(): string {
     return `
-      <div class="modal fade" id="form-cadastrar-leitor" tabindex="-1" aria-labelledby="formLeitores" aria-hidden="true">
+      <div class="modal fade" id="form-cadastrar-leitor" 
+        tabindex="-1" aria-labelledby="formLeitores" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title">Cadastrar Novo Leitor</h1>
+              <h1 class="modal-title">Cadastrar Leitor</h1>
             </div>
 
             <div class="modal-body">    

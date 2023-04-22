@@ -1,5 +1,5 @@
-import { CadastrarLeitor } from "./cadastrarLeitor/CadastrarLeitor"
-import { FiltrarLeitor } from "./filtrarLeitor/FiltrarLeitor"
+import { CadastrarLeitor } from "./CadastrarLeitor"
+import { FiltrarLeitor } from "./FiltrarLeitor"
 
 export class LeitorComponent {
 
@@ -8,7 +8,7 @@ export class LeitorComponent {
       <div class="m-3 d-flex justify-content-between align-items-center">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
           data-bs-target="#form-montar-filtro">
-        Filtrar
+          Filtrar
         </button>
 
         Leitores
