@@ -1,7 +1,11 @@
+import { LeitorStatus } from "../enum/leitorStatus";
+
 export class Leitor {
   constructor(
-    public id: string,
     public nome: string,
-    public email: string
+    public email: string,
+    public status: LeitorStatus,
+    public id?: string,
+    public multa?: Date
   ) {}
 }

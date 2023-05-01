@@ -11,7 +11,6 @@ export class LivroController {
   constructor() {
     this.livroComponent = new LivroComponent()
     this.livroService = new LivroService()
-    this.atualizarLivros()
   }
 
   async getView(): Promise<string> {
@@ -30,10 +29,6 @@ export class LivroController {
     this.EventoCadastrarLivro()
     this.EventoDeletarLivro()
     this.EventoAtualizarLivro()
-  }
-
-  private async atualizarLivros() {
-    this.livros = await this.livroService.pegarTodos()
   }
 
   private async updateTable(livros: Livro[]): Promise<string> {
@@ -56,10 +51,6 @@ export class LivroController {
     let inputTitulo = document.getElementById('input-editar-titulo') as HTMLInputElement
     let inputAutor = document.getElementById('input-editar-autor') as HTMLInputElement
     let inputStatus = document.getElementById('input-editar-select-status') as HTMLSelectElement
-
-    console.log(livro)
-    
-    console.log(livro.status === "Disponível" ? 0 : 1)
 
     inputTitulo.value = livro.titulo
     inputAutor.value = livro.autor
@@ -106,9 +97,14 @@ export class LivroController {
   }
 
   private async atualizarLista() {
+    await this.atualizarLivros()
     let tableLivros = document.getElementById('table-livros') as HTMLTableSectionElement
 
     tableLivros.innerHTML = await this.updateTable(this.livros)
+  }
+
+  private async atualizarLivros() {
+    this.livros = await this.livroService.pegarTodos()
   }
 
   private EventoCadastrarLivro() {

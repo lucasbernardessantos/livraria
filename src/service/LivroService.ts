@@ -7,19 +7,19 @@ export class LivroService {
   //private fireBaseConfig
   private biblioteca
   private db
-  private livrosRef
+  private docsLivrosRef
 
   constructor() {
     //this.fireBaseConfig = FireBase.fireBaseConfig
     this.biblioteca = initializeApp(FireBase.fireBaseConfig, 'Projeto-Biblioteca')
     this.db = getFirestore(this.biblioteca)
-    this.livrosRef = collection(this.db, 'Livro')
+    this.docsLivrosRef = collection(this.db, 'Livro')
   }
 
   async pegarTodos(): Promise<Livro[]> {
     let livros: Livro[] = []
 
-    let livroSnap = await getDocs(this.livrosRef)
+    let livroSnap = await getDocs(this.docsLivrosRef)
 
     livroSnap.forEach((doc) => {
       let livro = new Livro(doc.data().titulo, doc.data().autor, doc.data().status, doc.id)

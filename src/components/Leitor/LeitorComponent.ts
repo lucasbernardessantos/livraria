@@ -1,4 +1,5 @@
 import { CadastrarLeitor } from "./CadastrarLeitor"
+import { EditarLeitor } from "./EditarLeitor"
 import { FiltrarLeitor } from "./FiltrarLeitor"
 
 export class LeitorComponent {
@@ -23,12 +24,13 @@ export class LeitorComponent {
         <table class="table table-striped">
           <thead>
             <tr>
-              <th class="scope">Id</th>
               <th class="scope">Nome</th>
               <th class="scope">Email</th>
+              <th class="scope">Status</th>
+              <th class="scope">Multa</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="tabela-leitores">
             ${leitores}
           </tbody>
         </table>
@@ -37,6 +39,8 @@ export class LeitorComponent {
       ${CadastrarLeitor.template()}
 
       ${FiltrarLeitor.template()}
+
+      ${EditarLeitor.template()}
     `
   }
 }

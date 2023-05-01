@@ -22,12 +22,13 @@ btnLogin.addEventListener('click', (ev: MouseEvent) => {
   divContent.innerHTML = login.template()
 })
 
-btnLeitores.addEventListener('click', (ev: MouseEvent) => {
+btnLeitores.addEventListener('click', async (ev: MouseEvent) => {
   closeNavBar()
 
   let leitorController = new LeitorController()
 
-  divContent.innerHTML = leitorController.getView()
+  divContent.innerHTML = await leitorController.getView()
+  leitorController.adicionarEventos()
 })
 
 btnLivros.addEventListener('click', async (ev: MouseEvent) => {
