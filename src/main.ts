@@ -1,8 +1,7 @@
-import { Login } from "./components/Login"
-import { EmprestimoComponent } from "./components/Emprestimo/EmprestimoComponent"
-import { LeitorController } from "./controller/LeitorController"
-import { LivroController } from "./controller/LivroController"
-import { EmprestimoController } from "./controller/EmprestimoController"
+import { Login } from './components/Login';
+import { EmprestimoController } from './controller/EmprestimoController';
+import { LeitorController } from './controller/LeitorController';
+import { LivroController } from './controller/LivroController';
 
 const btnNavbar = document.getElementById('btn-navbar') as HTMLButtonElement
 const divNavBar = document.getElementById('navbarText') as HTMLDivElement
@@ -31,12 +30,13 @@ btnLeitores.addEventListener('click', (ev: MouseEvent) => {
   divContent.innerHTML = leitorController.getView()
 })
 
-btnLivros.addEventListener('click', (ev: MouseEvent) => {
+btnLivros.addEventListener('click', async (ev: MouseEvent) => {
   closeNavBar()
 
-  let livroController = new LivroController
+  let livroController = new LivroController()
 
-  divContent.innerHTML = livroController.getView()
+  divContent.innerHTML = await livroController.getView()
+  livroController.adicionarEventos()
 })
 
 btnEmprestismos.addEventListener('click', (ev: MouseEvent) => {

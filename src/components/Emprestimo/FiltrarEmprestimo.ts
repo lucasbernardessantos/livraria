@@ -34,9 +34,9 @@ export class FiltrarEmprestimo {
 
                   <select id="input-select-status" class="form-select form-select-sm" 
                     aria-label=".form-select-lg example">
-                    <option selected value="disponivel">Aberto</option>
-                    <option value="indisponivel">Fechado</option>
-                    <option value="indisponivel">Pendente</option>
+                    <option selected value="Disponível">Aberto</option>
+                    <option value="Indisponível">Fechado</option>
+                    <option value="Indisponível">Pendente</option>
                   </select>
                 </div>
               </form>

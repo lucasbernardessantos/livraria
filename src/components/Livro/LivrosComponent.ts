@@ -1,5 +1,6 @@
 import { CadastrarLivro } from "./CadastrarLivro"
 import { FiltrarLivro } from "./FiltrarLivro"
+import { EditarLivro } from "./EditarLivro"
 
 export class LivroComponent {
 
@@ -23,14 +24,13 @@ export class LivroComponent {
         <table class="table table-striped">
           <thead>
             <tr>
-              <th class="scope">Id</th>
               <th class="scope">Título</th>
               <th class="scope">Autor</th>
               <th class="scope">Status</th>
             </tr>
           </thead>
 
-          <tbody>
+          <tbody id="table-livros">
             ${livros}
           </tbody>
         </table>
@@ -39,6 +39,8 @@ export class LivroComponent {
       ${CadastrarLivro.template()}
 
       ${FiltrarLivro.template()}
+
+      ${EditarLivro.template()}
     `
   }
 }

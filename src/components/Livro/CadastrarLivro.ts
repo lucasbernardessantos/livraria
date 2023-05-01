@@ -26,8 +26,8 @@ export class CadastrarLivro {
 
                   <select id="input-select-status" class="form-select form-select-sm" 
                     aria-label=".form-select-lg example">
-                    <option selected value="disponivel">Disponível</option>
-                    <option value="indisponivel">Indisponível</option>
+                    <option selected value="Disponível">Disponível</option>
+                    <option value="Indisponível">Indisponível</option>
                   </select>
                 </div>
               </form>
@@ -35,7 +35,7 @@ export class CadastrarLivro {
 
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" id="btn-cadastrar-livro" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
