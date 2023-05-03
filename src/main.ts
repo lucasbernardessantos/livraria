@@ -40,12 +40,15 @@ btnLivros.addEventListener('click', async (ev: MouseEvent) => {
   livroController.adicionarEventos()
 })
 
-btnEmprestismos.addEventListener('click', (ev: MouseEvent) => {
+btnEmprestismos.addEventListener('click', async (ev: MouseEvent) => {
   closeNavBar()
 
   let emprestrimosController = new EmprestimoController()
 
-  divContent.innerHTML = emprestrimosController.getView()
+  divContent.innerHTML = await emprestrimosController.getView()
+  emprestrimosController.adicionarEventos()
+  await emprestrimosController.adicionarLeitorAoComponente()
+  await emprestrimosController.adicionarLivroAoComponente()
 })
 
 btnLogout.addEventListener('click', (ev: MouseEvent) => {

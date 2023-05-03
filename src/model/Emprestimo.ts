@@ -4,11 +4,11 @@ import { Livro } from './Livro'
 
 export class Emprestimo {
   constructor(
-    public id: string,
     public leitor: Leitor,
     public livro: Livro,
     public retirada: Date,
     public devolucao: Date,
-    public status: EmprestimoStatus
+    public status: EmprestimoStatus,
+    public id?: string,
   ) {}
 }

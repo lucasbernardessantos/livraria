@@ -14,9 +14,8 @@ export class CadastrarEmprestismo {
                 <div class="mb-3>
                   <label for="input-select-leitor" class="form-label">Leitor</label>
 
-                  <select id="input-select-status" class="form-select form-select-sm" 
+                  <select id="input-select-leitor" class="form-select form-select-sm" 
                     aria-label=".form-select-lg example">
-                    <option selected>Selecionar leitor</option>
                   </select>
                 </div>
 
@@ -25,7 +24,6 @@ export class CadastrarEmprestismo {
 
                   <select id="input-select-livro" class="form-select form-select-sm" 
                     aria-label=".form-select-lg example">
-                    <option selected>Selecionar livro</option>
                   </select>
                 </div>
               </form>
@@ -33,7 +31,13 @@ export class CadastrarEmprestismo {
 
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Cadastrar</button>
+              <button 
+                type="button" 
+                id="btn-cadastrar-emprestimo" 
+                class="btn btn-primary"
+              >
+                Cadastrar
+              </button>
             </div>
           </div>
         </div>

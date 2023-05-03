@@ -1,5 +1,6 @@
-import { CadastrarEmprestismo } from "./CadastrarEmprestimo";
-import { FiltrarEmprestimo } from "./FiltrarEmprestimo";
+import { CadastrarEmprestismo } from "./CadastrarEmprestimo"
+import { FecharEmprestimo } from "./FecharEmprestimo"
+import { FiltrarEmprestimo } from "./FiltrarEmprestimo"
 
 export class EmprestimoComponent {
 
@@ -40,6 +41,8 @@ export class EmprestimoComponent {
       ${CadastrarEmprestismo.template()}
 
       ${FiltrarEmprestimo.template()}
+
+      ${FecharEmprestimo.template()}
     `
   }
 }

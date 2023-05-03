@@ -84,7 +84,7 @@ export class LeitorController {
     let inputNome = this.getElementById('input-cadastrar-nome') as HTMLInputElement
     let inputEmail = this.getElementById('input-cadastrar-email') as HTMLInputElement
 
-    return new Leitor(inputNome.value, inputEmail.value, LeitorStatus.ok)
+    return new Leitor(inputNome.value, inputEmail.value, LeitorStatus.ok, "")
   }
   //#endregion
   
@@ -97,7 +97,7 @@ export class LeitorController {
 
     if (leitor.multa) {
       inputMulta.classList.toggle('invisible')
-      inputMulta.value = leitor.multa.toDateString()
+      inputMulta.value = leitor.multa.toString()
     }
 
     inputNome.value = leitor.nome
@@ -123,7 +123,7 @@ export class LeitorController {
       selectStatus.value == LeitorStatus.inadimplente || 
       selectStatus.value == LeitorStatus.ok
     )
-      return new Leitor(inputNome.value, inputEmail.value, selectStatus.value)
+      return new Leitor(inputNome.value, inputEmail.value, selectStatus.value, "")
   }
   //#endregion
 
@@ -142,7 +142,7 @@ export class LeitorController {
           <th class="scope">${leitor.nome}</th>
           <td>${leitor.email}</td>
           <td>${leitor.status}</td>
-          <td>${this.verificarMulta(leitor.multa)}</td>
+          <td>${this.verificarMulta(leitor?.multa)}</td>
         </tr>
       `
     })
