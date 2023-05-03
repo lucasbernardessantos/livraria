@@ -1,0 +1,12 @@
+{
+  "short_name": "Livraria",
+  "name": "Livraria",
+  "icons": [],
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3367D6",
+  "description": "Weather forecast information",
+  "screenshots": []
+}
